@@ -49,7 +49,7 @@ Now, please write the SQL query for each of the following questions. *Note*: Som
 1. (3 points) **Q1.3**:  For each `zipcode`, find the single most purchased `category_name` by total `bottle_qty`.
   Find the top 5 `zipcode` and the `category_name` when sorted in descending order by the most purchased total `bottle_qty`.
 
-1. (3 points) **Q1.4**: Find the set of all liquors with the characters "scotch" (in lowercase) in its `description`.
+1. (3 points) **Q1.4**: Find the set of all liquors with the characters "scotch" (in lowercase) in its `description`. You should use the `item` attribute to identify a specific liquor.
 
    Find the value of `city` for all liquor stores that sold at least one of every scotch as defined in the previous sentence.
 
