@@ -78,7 +78,7 @@ Some warmup questions:
   `C->A, A->B`
 
   * What are all the non-trivial functional dependencies in the closure
-    that have  only one attribute on the right side?
+    that have  only one attribute on the right side? The definition of trivial is a functional dependency where the right hand side is included in the left hand side. These are the functional dependencies that are true via reflexivity.
   * What are all the keys of `R`?
 
 1. (3 points) **Q2.2**: You have a relation `S(A, B, C, D)` and functional dependencies 
