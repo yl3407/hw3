@@ -91,45 +91,44 @@ Some warmup questions:
 Now for a real application. 
 The Iowa dataset has the following un-normalized schema:
 
-
-        CREATE TABLE iowa (
-            date date,
-            convenience_store character varying(128),
-            store integer,
-            name character varying(128),
-            address character varying(128),
-            city character varying(128),
-            zipcode text,
-            store_location character varying(128),
-            county_number integer,
-            county character varying(128),
-            category integer,
-            category_name character varying(128),
-            vendor_no integer,
-            vendor character varying(128),
-            item text,
-            description character varying(128),
-            pack integer,
-            liter_size integer,
-            state_btl_cost double precision,
-            btl_price double precision,
-            bottle_qty integer,
-            total double precision
-        );
+    CREATE TABLE iowa (
+        date date,
+        convenience_store character varying(128),
+        store integer,
+        name character varying(128),
+        address character varying(128),
+        city character varying(128),
+        zipcode text,
+        store_location character varying(128),
+        county_number integer,
+        county character varying(128),
+        category integer,
+        category_name character varying(128),
+        vendor_no integer,
+        vendor character varying(128),
+        item text,
+        description character varying(128),
+        pack integer,
+        liter_size integer,
+        state_btl_cost double precision,
+        btl_price double precision,
+        bottle_qty integer,
+        total double precision
+    );
 
 
 You can verify this by opening the sqlite3 prompt, and typing
 
-        .schema iowa
+    .schema iowa
 
 Suppose we have the functional dependencies:
 
-        store -> convenience_store, address, name, city, zipcode, store_location
-                county_number, county
-        vendor_no -> vendor
-        category -> category_name
-        item -> category, liter_size, description, state_btl_cost btl_price
-        date, store, vendor_no, item -> pack, bottle_qty, total
+    store → convenience_store, address, name, city, zipcode, store_location,
+             county_number, county
+    vendor_no → vendor
+    category → category_name
+    item → category, liter_size, description, state_btl_cost btl_price
+    date, store, vendor_no, item → pack, bottle_qty, total
 
 
 1. (2 points) **Q2.3**: What are the keys in 'iowa'?
