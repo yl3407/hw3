@@ -79,14 +79,14 @@ Some warmup questions:
 
   * What are all the non-trivial functional dependencies in the closure
     that have  only one attribute on the right side? The definition of trivial is a functional dependency where the right hand side is included in the left hand side. These are the functional dependencies that are true via reflexivity.
-  * What are all the keys of `R`?
+  * What are all the minimal keys of `R`? (We do not care about super keys)
 
 1. (3 points) **Q2.2**: You have a relation `S(A, B, C, D)` and functional dependencies 
   `AB->C, BC->D, CD->A, and AD->B`
 
   * What are all the non-trivial functional dependencies in the closure
     that have  only one attribute on the right side?
-  * What are all the keys of `S`?
+  * What are all the minimal keys of `S`? (We do not care about super keys)
 
 Now for a real application. 
 The Iowa dataset has the following un-normalized schema:
